@@ -1,4 +1,5 @@
 <?php
+//ˆê”ÔÅ‰url‚Ì’†‚Épage=0;
 $array =array(1,2,3,4,5);
 $page = $_GET['page'];
 ?>
