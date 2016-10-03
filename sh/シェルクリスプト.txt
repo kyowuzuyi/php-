@@ -1,0 +1,13 @@
+シェルスクリプトからSQL文を実行する場合はこのようにします。
+
+batch.sqlファイルに実行したいSQL文をあらかじめ書いておいて、
+mysql -h host -u username -ppassword dbname < batch.sql
+(↑ -pの直後に続けてパスワードを書きます。)
+
+SQL文をインラインで書いて実行することもできます。
+mysql -h host -u user -ppassword dbname -e "INSERT INTO users (id, nickname) values (1, 'DQNEO');"
+
+これを応用すれば、「データベースを初期化」→「テーブル作成」→「初期データ投入」のような作業を自動化することができます。
+SQL文の中でシェル変数が使えるので非常に便利です。
+
+以下に実際の応用例を示します。
